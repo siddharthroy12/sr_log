@@ -12,7 +12,7 @@ enum
 	LOG_ERROR = 1 << 4
 };
 
-char sr_log_levels = LOG_ALL;
+static char sr_log_levels = LOG_ALL;
 
 static void sr_set_log_level(char flags)
 {
