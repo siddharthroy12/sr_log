@@ -25,18 +25,18 @@ static void sr_trace_log(char level, char* message)
 	{
 		if (level == LOG_INFO)
 		{
-			printf("INFO: ");
+			printf("\x1B[32m[INFO]: ");
 		}
 		else if (level == LOG_WARNING)
 		{
-			printf("WARNING: ");
+			printf("\x1b[33m[WARNING]: ");
 		}
 		else if (level == LOG_ERROR)
 		{
-			printf("ERROR: ");
+			printf("\x1B[31m[ERROR]: ");
 		}
 
-		printf("%s\n", message);
+		printf("%s\n\x1B[0m", message);
 	}
 }
 
